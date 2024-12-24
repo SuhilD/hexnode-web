@@ -1,0 +1,210 @@
+.multi-platform-wrapper {
+    padding: 80px 0;
+    overflow: hidden;
+    height: 860px;
+    background-color: $color-bg-lightgrey;
+
+    @include tablet {
+        height: 850px;
+    }
+
+    @include mobile {
+        padding: 60px 0;
+        height: auto;
+    }
+
+    .multi-platform-title{
+        text-align: center;
+
+        .multi-platform-title-lg{
+            @include fontsize(36px);
+            font-weight: $font-weight-700;
+            line-height: $line-height-120;
+            padding-bottom: 20px;
+
+            @include tablet{
+                padding:0 24px 20px;
+                @include fontsize(40px);
+            }        
+
+            @include mobile{
+                padding:0 10px 20px;
+                @include fontsize(32px);
+            }            
+        }
+        .multi-platform-title-sm{
+            color: $color-lightblack;
+            line-height: $line-height-160;
+            @include fontsize(16px);
+            padding-bottom: 50px;
+
+            @include tablet{            
+                @include fontsize(18px);
+            } 
+
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+
+    .multi-platform-slider {
+        overflow: hidden;
+
+        .slick-list {
+            .slick-track {
+                overflow: hidden;
+            }
+        }
+
+        .multi-img-wrapper {
+            border-radius: 20px;
+
+            img {
+                height: 560px;
+                object-fit: fill;
+
+                @include tablet{
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    .multi-content-slider {
+        overflow: hidden;
+
+        .slick-list {
+            .slick-track {
+                overflow: hidden;
+            }
+        }
+        
+        .multi-content {
+            border-bottom: solid 1px $color-border-grey;
+            padding: 10px 30px;
+            cursor: pointer;
+            margin: 0;
+    
+            h3 {
+                @include fontsize(22px);
+                font-weight: $font-weight-700;
+                
+            }
+    
+            .multi-content-text-wrapper {
+                display: none;
+                transition: all ease 0.5s;
+            }
+        }
+
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    &:last-child {
+                        .multi-content {
+                            border-bottom: 0;
+                        }
+                    }
+
+                    &.slick-current {
+                        .multi-content {
+                            background-color: $color-white;
+                            border: solid 1px $color-border-grey;
+                            border-radius: 15px;
+                            padding: 30px;
+                            margin: 0;                            
+
+                            .multi-content-text-wrapper {                                
+                                display: block;
+
+                                .multi-content-text{
+                                    color: $color-lightblack;
+                                    line-height: $line-height-160;
+                                    @include fontsize(16px);
+                                }
+                                .multi-content-btn{
+                                    margin-top: 20px;
+                                    a{
+                                        @include fontsize(18px);
+                                        color: $color-pink;
+                                        text-decoration: none; 
+                                        font-weight: $font-weight-600;                                       
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .mobile-accordion{
+        .accordion{
+            .accordion-item{
+                .accordion-header{
+                    border: solid 1px transparent;                    
+
+                    .accordion-button{
+                        @include fontsize(22px);
+                        color: $color-primary;
+                        font-weight: $font-weight-700;
+                        &:focus{
+                            box-shadow: none;
+                        }
+
+                        &:not(.collapsed){
+                            background-color: $color-white;    
+                            color: $color-primary;
+                        }
+
+                        &::after{
+                            content: none;
+                        }
+                    }
+
+                    .accordion-collapse{  
+                        &.show{                            
+                            .accordion-body{                                
+                                margin-top: 40px;                                
+                            }
+                        }                           
+                    }                    
+                }
+
+                .accordion-collapse{
+                    .accordion-body{
+                        padding: 30px;
+                        .accordion-img{
+                            height: 300px;
+                            overflow: hidden;
+                            text-align: center;
+                            img{                                
+                                width: 90%;
+                            }
+                        }
+
+                        .accordion-body-text{
+                            padding: 12px 0;
+                            @include fontsize(17px);
+                            color: $color-lightblack;
+                            line-height: $line-height-140;
+                        }
+
+                        .tryhexnode-mobile-link{
+                            a{
+                                @include fontsize(18px);
+                                color: $color-pink;
+                                font-weight: $font-weight-600;
+                                line-height: $line-height-120;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

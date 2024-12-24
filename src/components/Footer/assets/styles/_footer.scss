@@ -1,0 +1,40 @@
+.footer-section{    
+    background-color: $color-footer-bg-white;
+
+    .footer-div{
+        padding: 20px 0;
+        @include mobile {
+            padding: 30px 0;
+        }
+
+        .footer-left{
+            ul{
+                margin: 0;
+                li{
+                    margin: 0;
+                    a{
+                        text-decoration: none;
+                        color: $color-footer-grey;
+                        @include fontsize(12px); 
+                        transition: all ease 0.3s; 
+                        
+                        &:hover{
+                            color: $color-primary;
+                        }
+                    }
+                }
+                .footer-dash{
+                    margin: 0;
+                    padding: 0 5px;
+                }
+            }
+            @include mobile {
+                    margin-bottom: 20px;
+            }
+        }
+        .footer-right{            
+            color: $color-footer-grey;
+            @include fontsize(12px);
+        }
+    }
+}

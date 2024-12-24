@@ -1,0 +1,107 @@
+.endpoint-section{    
+    margin-top: 60px;
+    padding: 60px 0;
+    background-color: $color-white;
+
+    @include tablet{
+        margin-top: 0;
+    }
+
+    @include mobile{
+        margin-top: 0;
+    }
+
+
+    .endpoint-title{
+        @include fontsize(36px);
+        color: $color-primary;
+        line-height: $line-height-130;
+        font-weight: $font-weight-700;
+        max-width: 800px;
+        padding-bottom: 60px;
+        
+        @include tablet{
+            @include fontsize(40px);
+        }
+
+        @include mobile {                          
+            width: 88%;
+            @include fontsize(32px);
+            padding-bottom: 40px;
+        }
+    }
+
+    .endpoint-grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 80px; 
+        
+        @include tablet{
+            grid-template-columns: repeat(2,1fr);
+            gap: 40px; 
+        }
+
+        @include mobile{
+            grid-template-columns: repeat(1,1fr);
+            gap: 40px; 
+            margin: 0 30px;
+        }
+
+        .endpoint-card{
+            .endpoint-img-div{ 
+                display: flex;
+                justify-content: center; 
+                height: 220px; 
+                overflow: hidden;
+                             
+                img{
+                    // width: 380px;
+                    border-radius: 18px;
+                    width: 100%;
+                    object-fit: cover;  
+                    
+                    @include tablet{
+                        width: 333px;
+                        height: 210px;
+                    }
+
+                    @include mobile{
+                        width: 340px;
+                        height: 215px;
+                    }
+                }
+            }
+            
+            .endpoint-text-lg{
+                padding: 40px 0 20px;
+                @include fontsize(29px);
+                line-height: $line-height-120;
+                color: $color-primary;
+                font-weight: $font-weight-700;
+
+                @include tablet{
+                    @include fontsize(24px);                    
+                }
+
+                @include mobile{
+                    text-align: center;
+                    padding: 20px 0 15px;                    
+                }
+            }
+            .endpoint-text-sm{
+                @include fontsize(16px);
+                line-height: $line-height-140;
+                color: $color-lightblack;
+
+                @include mobile{
+                    text-align: center;
+                    @include fontsize(16px);
+                }
+
+                @include tablet{                    
+                    @include fontsize(16px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+:root{
+    scroll-behavior: auto;
+}
+
+html{
+    font-size: 100%;
+}
+
+body {
+    font-family: $font-primary;
+    @include fontsize(16px);
+    line-height: $line-height-100;
+    font-weight: $font-weight-400;
+    color: $color-black;
+    background-color: $color-bg-lightgrey;
+}
+
+.button{
+    text-decoration: none;    
+    text-align: center;
+    appearance: none;
+    color: $color-white;
+    font-family: $font-primary;
+    @include fontsize(15px);
+    font-weight: $font-weight-400;
+    line-height: $line-height-140;
+    width:fit-content;
+    height: 44px;
+    padding: 0 24px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
+    border-radius: 4px;
+}
+
+.button-primary{
+    background-color: $color-pink;
+    border: solid 1px $color-pink;    
+
+    &:hover{
+        background-color: $color-hover-pink;        
+    }
+}
+
+.button-trybutton{
+    background-color: $color-pink;
+    border: solid 1px $color-pink; 
+    @include fontsize(17px);
+    color: $color-white;
+    padding: 26px 50px;
+}
+
+.button-fullwidth{
+    width: 100%;
+        
+    a{
+        text-decoration: none;
+        color: $color-white;        
+    }
+}
+
+.button-letstry{
+    height: 47px;
+}
+
+.img-wrapper {
+	display: block;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		object-fit: cover;
+		object-position: 50% 50%;
+	}
+}

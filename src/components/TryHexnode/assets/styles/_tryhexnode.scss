@@ -1,0 +1,41 @@
+.tryhexnode-section{
+    height: 330px;
+    background-color: $color-primary;
+
+    @include mobile {
+        height: 284px;            
+    }
+
+    .tryhexnode-content{
+        .tryhexnode-text{
+            max-width: 1000px;
+            @include fontsize(40px);
+            font-weight: $font-weight-700;
+            color: $color-white;
+            margin-bottom: 20px;
+            line-height: $line-height-130;
+
+            @include tablet {
+                width: 88%;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            @include mobile {                
+                @include fontsize(30px);                
+            }
+        }
+
+        .tryhexnode-button-wrapper{            
+                a{
+                    text-decoration: none;
+                    
+                    &:hover{
+                        .tryhexnode-button{
+                            background-color: $color-hover-pink;
+                        }                        
+                    }
+                }            
+        }
+    }    
+}

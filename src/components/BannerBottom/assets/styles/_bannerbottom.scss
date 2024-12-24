@@ -1,0 +1,94 @@
+.bannerbottom-wrapper{
+    background-color: $color-bg-darkgrey;
+    .bannerbottom-section {        
+        width: 100%;
+        padding: 20px 0;
+
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            
+            .bannerbottom-content{
+                padding: 30px 0;
+            }
+        }
+
+        @include tablet{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    
+        .bannerbottom-content { 
+            width: 285px;
+            margin: 0 10px;  
+            transition: all ease 0.3s;   
+
+            &:hover{
+                transform: translateY(-4px);
+            }  
+    
+            @include tablet{
+                width: 180px;
+            }
+
+            @include tablet{
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 100%;
+            }
+
+            a{                                         
+                text-decoration: none;                
+                    
+                @include mobile{
+                    padding: 40px 0;                    
+                    text-align: center;
+                    width: 300px !important;
+    
+                    &:hover{
+                        transform: none;
+                    }
+                }
+    
+                @include tablet{                    
+                    width: 167px;
+    
+                    &:hover{
+                        transform: none;
+                    }
+                }
+
+                .bannerbottom-img {
+                    img {                
+                        height: 25px;
+                    }
+                }
+    
+                .bannerbottom-text {            
+                    margin-top: 10px;            
+                    color: $color-opacity-greyfont;
+                    @include fontsize(13px);
+                    line-height: $line-height-140; 
+                    
+                    @include mobile{
+                        @include fontsize(14px);
+                        line-height: $line-height-160;
+                    }
+                }
+            }              
+        }
+    
+        .bannerbottom-content-border {
+            width: 1px;
+            height: 100px;
+            background-color: $color-banner-grey-text;
+
+            @include mobile{
+                width: 100px;
+                height: 1px;
+                transform: rotate(180deg);
+                margin: 10px auto;                
+            }
+        }                        
+    }    
+}

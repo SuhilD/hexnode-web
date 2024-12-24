@@ -1,0 +1,373 @@
+.banner-section{
+    padding: 130px 0 60px;    
+    background-color: $color-primary;
+    overflow: hidden;
+    
+    @include tablet{        
+        padding: 85px 0 30px;
+    }
+
+    .banner-content{             
+        height: 420px;         
+
+        @include tablet{                        
+            padding: 20px 100px;   
+            text-align: center;  
+            height: auto;        
+        }
+
+        @include tablet{                        
+            padding: 20px 30px;   
+            text-align: center;  
+            height: auto;        
+        }
+        
+        .banner-text-one{
+            color: $color-banner-grey-text;
+            margin-bottom: 10px;
+            font-weight: $font-weight-600;
+
+            @include mobile{
+                margin-bottom: 10px;
+            }
+        }
+        .banner-text-two{
+            @include fontsize(35px);
+            color: $color-white;
+            line-height: $line-height-130;
+            font-weight: $font-weight-700;
+            margin-bottom: 10px;           
+
+            @include mobile{
+                @include fontsize(34px);
+                margin-bottom: 20px;
+            }
+        }
+        .banner-text-three{
+            @include fontsize(17px);
+            line-height: $line-height-150;
+            color: $color-greyfont;
+            margin-bottom: 20px;
+
+            @include tablet{
+                @include fontsize(18px);
+            }
+
+            @include mobile{
+                @include fontsize(18px);
+            }
+        }
+        .banner-form-row{  
+
+            @include tablet{
+                padding: 0 20px;
+            }
+
+            @include mobile{
+                padding: 0 16px;
+            }   
+
+            .form-control{
+                height: 100%;
+                margin-right: 8px;
+                border-radius: 3px;
+                height: 53px;
+
+                @include mobile{
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                }
+
+                &:focus{
+                    box-shadow: none;                    
+                }
+            }
+
+            .banner-button{
+                color: $color-white;
+                width: 70%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $color-pink;
+                color: $color-white;
+                border-radius: 3px;
+                transition: all ease 0.3s;
+
+                &:hover{
+                    background-color: $color-hover-pink;
+                }
+
+                @include mobile{
+                    width: 100%;
+                    height: 53px;
+                }
+            }
+        }
+    }
+
+    .img-col{
+        padding: 0%;
+        overflow: hidden;
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;            
+        }
+
+        .banner-img-container{
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 420px;
+
+            @include mobile{
+                height: 288px;
+            }
+
+            .bg-img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+                padding: 0 12px;
+                
+                @include mobile{
+                    padding: 0 25px;
+                }
+
+            }
+            
+            .btn-yellow {             
+                position: absolute;
+                bottom: 85%;
+                left: 3%;
+                z-index: 1;
+                background-color: $color-banner-btn-yellow;    
+                padding: 5px;
+                border-radius: 25px;
+                border: none;
+                outline: none;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                color: $color-primary;
+
+                @include mobile{
+                    padding: 2px;
+                    bottom:85%;                
+                    left: 8%;
+                }
+
+                &.btn-background-slide {
+                  transition: color 300ms ease-in-out;                    
+              
+                  &::before {            
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: $color-white;
+                    transition: transform 300ms ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                  }
+              
+                  &:hover::before,
+                  &:focus::before {                    
+                    transform: scaleX(1);
+                  }      
+                
+                }
+                .icon-bg{
+                    background-color: $color-white;
+                    border-radius: 50%;
+                    padding: 6px;
+                    overflow: hidden;
+                    margin-right: 5px;
+                    
+                    @include mobile{
+                        padding: 1px;
+                        margin-right: 3px;
+                    }
+
+                    img{                
+                        border-radius: 50%;
+
+                        @include mobile{
+                            width: 20px;
+                            height: 10px;
+                        }
+                    }
+                }
+        
+                .btn-content{
+                    color: $color-primary;
+                    padding-right: 5px;
+                    @include fontsize(18px);
+
+                    @include mobile{
+                        @include fontsize(12px);
+                    }
+
+                }
+              }
+
+              .btn-blue {             
+                position: absolute;                
+                left: 63%;                
+                bottom: 74%;
+                z-index: 1;
+                background-color: $color-banner-btn-blue;    
+                padding: 5px;
+                border-radius: 25px;
+                border: none;
+                outline: none;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                color: $color-primary;
+
+                @include mobile{
+                    padding: 2px;
+                    left: 63%;                
+                    bottom: 70%;
+                }
+              
+                &.btn-background-slide {
+                  transition: color 300ms ease-in-out;                    
+              
+                  &::before {            
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: $color-white;
+                    transition: transform 300ms ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                  }
+              
+                  &:hover::before,
+                  &:focus::before {                    
+                    transform: scaleX(1);
+                  }      
+                
+                }
+                .icon-bg{
+                    background-color: $color-white;
+                    border-radius: 50%;
+                    padding: 6px;
+                    overflow: hidden;
+                    margin-right: 5px; 
+                    
+                    @include mobile{
+                        padding: 1px;
+                        margin-right: 3px;
+                    }
+                    
+                    img{                
+                        border-radius: 50%;    
+                        
+                        @include mobile{
+                            width: 20px;
+                            height: 10px;
+                        }
+                    }
+                }
+        
+                .btn-content{
+                    color: $color-primary;
+                    padding-right: 5px;
+                    @include fontsize(18px);
+
+                    @include mobile{
+                        @include fontsize(12px);
+                    }
+                }
+              }
+
+              .btn-green {             
+                position: absolute;
+                bottom: 39%;
+                left: 40%;
+                z-index: 1;
+                background-color: $color-banner-btn-green;    
+                padding: 5px;
+                border-radius: 25px;
+                border: none;
+                outline: none;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+                color: $color-primary;
+
+                @include mobile{
+                    padding: 2px;
+                    bottom: 36%;
+                    left: 45%;
+                }
+              
+                &.btn-background-slide {
+                  transition: color 300ms ease-in-out;                    
+              
+                  &::before {            
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -1;
+                    background-color: $color-white;
+                    transition: transform 300ms ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                  }
+              
+                  &:hover::before,
+                  &:focus::before {                    
+                    transform: scaleX(1);
+                  }      
+                
+                }
+                .icon-bg{
+                    background-color: $color-white;
+                    border-radius: 50%;
+                    padding: 6px;
+                    overflow: hidden;
+                    margin-right: 5px;  
+                    
+                    @include mobile{
+                        padding: 1px;
+                        margin-right: 3px;
+                    }
+
+                    img{                
+                        border-radius: 50%; 
+
+                        @include mobile{
+                            width: 20px;
+                            height: 10px;
+                        }                                               
+                    }
+                }
+        
+                .btn-content{
+                    color: $color-primary;
+                    padding-right: 5px;
+                    @include fontsize(18px);
+
+                    @include mobile{
+                        @include fontsize(12px);
+                    }
+                }
+              }
+        }
+    }
+}
