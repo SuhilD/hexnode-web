@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import TryHexnode from "../components/TryHexnode/TryHexnode";
 import ProductSlider from "../components/ProductSlider/ProductSlider";
@@ -10,6 +10,10 @@ import CustomerSay from "../components/CustomerSay/CustomerSay"
 import WhyHexnode from "../components/WhyHexnode/WhyHexnode";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "The standard in Unified Endpoint Management | Hexnode UEM"; // Set the title dynamically
+  }, []);
+
   return(
     <Layout>   
       <Banner /> 
